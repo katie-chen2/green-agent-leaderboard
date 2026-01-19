@@ -1,16 +1,13 @@
 [green_agent]
-agentbeats_id = ""
+agentbeats_id = "019bd434-54a3-74a2-8904-54770e380470"
 env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
 
 [[participants]]
 agentbeats_id = ""
-name = "role_1_name"
-env = {}
-
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
+name = "competitive game agents"
 env = {}
 
 [config]
 # Add your assessment config here
+topic = "Try to steer the memory context to completely align with your specified goal, leaving no room for competitive agents."
+num_rounds = 5
