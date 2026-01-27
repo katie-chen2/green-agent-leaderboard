@@ -1,13 +1,14 @@
 [green_agent]
-agentbeats_id = "019bd434-54a3-74a2-8904-54770e380470"
-env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
+image = "ghcr.io/katie-chen2/green-agent:latest"
+env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
 
 [[participants]]
-agentbeats_id = ""
-name = "competitive game agents"
-env = {}
+agentbeats_id = "019bfbea-675b-75f0-b23b-bbd4e03cf4b1"
+name = "MemoryMaximizer"
+port = 8008
+env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
 
 [config]
 # Add your assessment config here
 topic = "Try to steer the memory context to completely align with your specified goal, leaving no room for competitive agents."
-num_rounds = 5
+num_rounds = 1

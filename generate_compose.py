@@ -185,7 +185,7 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
         PARTICIPANT_TEMPLATE.format(
             name=p["name"],
             image=p["image"],
-            port=DEFAULT_PORT,
+            port=p.get("port", DEFAULT_PORT),
             env=format_env_vars(p.get("env", {}))
         )
         for p in participants
@@ -209,10 +209,11 @@ def generate_a2a_scenario(scenario: dict[str, Any]) -> str:
 
     participant_lines = []
     for p in participants:
+        port = p.get("port", DEFAULT_PORT)
         lines = [
             f"[[participants]]",
             f"role = \"{p['name']}\"",
-            f"endpoint = \"http://{p['name']}:{DEFAULT_PORT}\"",
+            f"endpoint = \"http://{p['name']}:{port}\"",
         ]
         if "agentbeats_id" in p:
             lines.append(f"agentbeats_id = \"{p['agentbeats_id']}\"")

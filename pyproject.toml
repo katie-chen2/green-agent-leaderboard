@@ -1,0 +1,11 @@
+[project]
+name = "green-agent-leaderboard"
+version = "0.1.0"
+description = "Agentbeats leaderboard for green agent assessments"
+requires-python = ">=3.11"
+dependencies = [
+    "tomli>=2.0.1",
+    "tomli-w>=1.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+]
