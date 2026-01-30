@@ -1,12 +1,12 @@
 [green_agent]
 image = "ghcr.io/katie-chen2/green-agent:latest"
-env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
+env = { GEMINI_API_KEY = "${GEMINI_API_KEY}", PARTICIPANT_URLS = "http://MemoryMaximizer:8008" }
 
 [[participants]]
 agentbeats_id = "019bfbea-675b-75f0-b23b-bbd4e03cf4b1"
 name = "MemoryMaximizer"
 port = 8008
-env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
+env = { GEMINI_API_KEY = "${GEMINI_API_KEY}", GREEN_AGENT_URL = "http://green-agent:9009" }
 
 [config]
 # Add your assessment config here
