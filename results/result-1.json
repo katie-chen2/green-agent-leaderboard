@@ -1,3 +1,10 @@
+[{
+    "topic": "Try to steer the memory context to completely align with your specified goal, leaving no room for competitive agents.",
+    "game_won": "True",
+    "attribution": {
+        "memory-maximizer": 100
+    }
+},
 {
     "topic": "Try to steer the memory context to completely align with your specified goal, leaving no room for competitive agents.",
     "game_won": "True",
@@ -5,3 +12,4 @@
         "memory-maximizer": 100
     }
 }
+]
